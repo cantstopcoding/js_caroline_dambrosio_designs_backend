@@ -5,11 +5,11 @@ one:
   image_url: MyString
   price: 1
   description: MyString
-  category_id: 1
+  category: one
 
 two:
   name: MyString
   image_url: MyString
   price: 1
   description: MyString
-  category_id: 1
+  category: two

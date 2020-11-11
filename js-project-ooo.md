@@ -35,7 +35,7 @@ NOTE: Remember to VERTICALLY build your MVP! This means building out one model/f
 Migrations
 Model classes
 Associations
-[] 9. Test your models and associations in the console
+[x] 9. Test your models and associations in the console
 Create some seed data
 Adjust migrations as needed
 PART 2: Routes, Controllers, Serializers

@@ -5,7 +5,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :image_url
       t.integer :price, :limit => 8
       t.string :description
-      t.integer :category_id, :limit => 8
+      t.belongs_to :category, foreign_key: true
 
       t.timestamps
     end
