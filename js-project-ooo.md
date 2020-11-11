@@ -25,13 +25,13 @@ NOW WE'RE READY FOR PROJECT SET UP
 
 (Replace <my_app_name> with the actual name of your project)
 [x] 6. Create github repo
-[] 7. Create a new branch for building out models `git co -b <branch_name>`. This way you can always go back to the fresh API.
+[x] 7. Create a new branch for building out models `git co -b <branch_name>`. This way you can always go back to the fresh API.
 NOTE: It is best practice to always create a new branch when working on a new feature/edit to your code. Your master branch should only have working code. Debug in a branch, not in master.
 NOW WE'RE READY TO CODE (BUT JUST OUR MODELS — NO CONTROLLERS OR SERIALIZERS YET)
 
 NOTE: Remember to VERTICALLY build your MVP! This means building out one model/feature at a time. DO NOT build out all the models and controllers at the same time. This is the easiest way to get lost in your project very early. Read more about this here.
 
-[] 8. Build your models
+[x] 8. Build your models
 Migrations
 Model classes
 Associations

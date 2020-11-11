@@ -3,9 +3,9 @@ class CreateItems < ActiveRecord::Migration[6.0]
     create_table :items do |t|
       t.string :name
       t.string :image_url
-      t.integer :price
+      t.integer :price, :limit => 8
       t.string :description
-      t.integer :category_id
+      t.integer :category_id, :limit => 8
 
       t.timestamps
     end
