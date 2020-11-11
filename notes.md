@@ -1,8 +1,8 @@
 ## Models
     Item
         - name
-        - price
         - image_url
+        - price
         - description
         - category_id
 
