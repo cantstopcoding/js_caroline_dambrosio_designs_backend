@@ -41,12 +41,12 @@ Adjust migrations as needed
 
 # PART 2: Routes, Controllers, Serializers
 [x] 1. Name spaced routes
-[] 2. Controllers rendering JSON based on routes
+[x] 2. Controllers rendering JSON based on routes
     -How does namespaced routes impact the controller?
         -In your console run: rails g controller api/v1/Syllabuses
         -Notice that the controller file this created lives in /app/controllers/api/v1/syllabuses_controller.rb and the actual class name of the controller is namespaced like Api::V1::SyllabusController as well.
-Review docs on nested resources in Rails
-[] 3. Fast JSON Serializer
+# Review docs on nested resources in Rails
+[] 3. Fast JSON API Serializer
 Bonus
  Leverage a CSS framework to improve the styling of your application
 Easiest to implement: Bulma
