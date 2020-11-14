@@ -46,15 +46,16 @@ Adjust migrations as needed
         -In your console run: rails g controller api/v1/Syllabuses
         -Notice that the controller file this created lives in /app/controllers/api/v1/syllabuses_controller.rb and the actual class name of the controller is namespaced like Api::V1::SyllabusController as well.
 # Review docs on nested resources in Rails
-[] 3. Fast JSON API Serializer
+[x] 3. Fast JSON API Serializer
 Bonus
  Leverage a CSS framework to improve the styling of your application
 Easiest to implement: Bulma
 Most popular: Bootstrap
 Also good: Semantic UI
 Not bootstrap: Materialize
-Confirm
- You have a large number of small Git commits
- Your commit messages are meaningful
- You made the changes in a commit that relate to the commit message
- You don't include changes in a commit that aren't related to the commit message
+
+## Confirm:
+[] You have a large number of small Git commits
+[] Your commit messages are meaningful
+[] You made the changes in a commit that relate to the commit message
+[] You don't include changes in a commit that aren't related to the commit message
