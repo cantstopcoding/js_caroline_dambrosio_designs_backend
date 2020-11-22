@@ -5,9 +5,9 @@ class Api::V1::UsersController < ApplicationController
     end
     
     def create
-      @user = User.create(user_params)
-      if @user.valid?
-        render json: { user: UserSerializer.new(@user) }, status: :created
+      user = User.create(user_params)
+      if user.valid?
+        render json: { user: UserSerializer.new(user) }, status: :created
       else
         render json: { error: 'failed to create user' }, status: :not_acceptable
       end
