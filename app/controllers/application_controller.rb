@@ -17,7 +17,5 @@ class ApplicationController < ActionController::API
                 nil 
             end
         end
-
-
     end
 end
