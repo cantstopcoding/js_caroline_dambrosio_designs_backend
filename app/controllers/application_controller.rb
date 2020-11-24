@@ -18,4 +18,21 @@ class ApplicationController < ActionController::API
             end
         end
     end
+
+    def current_user
+        if decode_token
+            user_id = decode_token[0]['user_id']
+            # JWT.decode => [{ "user_id"=>1 }, { "alg"=>"HS256" }]
+            # [0] is the payload { "user_id"=>1 }
+            @user = User.find_by(id: user_id)
+        end
+    end
+
+    def logged_in?
+        !!current_user
+    end
+
+    def authorized
+        render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
+    end
 end
