@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :items, only: [:index, :create]
       resources :categories, only: [:index]
       resources :users, only: [:index, :create]
+      post '/login', to: 'auth#create'
     end
   end
 end
