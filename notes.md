@@ -9,6 +9,7 @@
     Review
         - content
         - item_id
+        - user_id
     
     Category
         - name
