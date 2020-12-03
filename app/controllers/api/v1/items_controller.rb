@@ -1,7 +1,7 @@
 # the namespacing reflects the namespaced routes
 # the namespacing is for naming purpuses, to indicate that you're fetching from the api and the version
 class Api::V1::ItemsController < ApplicationController
-    skip_before_action :authorized, only: [:index]
+    skip_before_action :authorized, only: [:index, :create]
 
     def index
         items = Item.all 
