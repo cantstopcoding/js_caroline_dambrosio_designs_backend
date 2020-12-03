@@ -1,7 +1,7 @@
 # the namespacing reflects the namespaced routes
 # the namespacing is for naming purpuses, to indicate that you're fetching from the api and the version
 class Api::V1::ItemsController < ApplicationController
-    skip_before_action :authorized, only: [:index]
+    skip_before_action :authorized, only: [:index, :show]
 
     def index
         items = Item.all 
@@ -16,6 +16,11 @@ class Api::V1::ItemsController < ApplicationController
             render json: {errors: item.errors.full_messages},
             status: :unprocessible_entity
         end
+    end
+
+    def show
+        item = Item.find_by(id: params[:id])
+        render json: ItemSerializer.new(item), status: :accepted
     end
 
     private
