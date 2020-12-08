@@ -25,4 +25,6 @@ expensive_sandals = Item.create(name: "Expensive Sandals", image_url: "//images.
 
 coco_review = Review.create(content: "Nice Dress!", user_id: coco.id, item_id: outlander_dress.id)
 christian_review = Review.create(content: "Wow!", user_id: christian.id, item_id: expensive_purse.id)
+christian_review2 = Review.create(content: "These are greatest sandals ever!", user_id: christian.id, item_id: expensive_sandals.id)
 caroline_review = Review.create(content: "Cool!", user_id: caroline.id, item_id: expensive_sandals.id)
+caroline_review2 = Review.create(content: "This is a really nice purse!", user_id: caroline.id, item_id: expensive_purse.id)
