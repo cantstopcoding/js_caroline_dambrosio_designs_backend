@@ -29,19 +29,15 @@ ActiveRecord::Schema.define(version: 2020_12_02_032749) do
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
     t.index ["category_id"], name: "index_items_on_category_id"
-    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string "content"
     t.bigint "item_id", null: false
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["item_id"], name: "index_reviews_on_item_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,7 +52,5 @@ ActiveRecord::Schema.define(version: 2020_12_02_032749) do
   end
 
   add_foreign_key "items", "categories"
-  add_foreign_key "items", "users"
   add_foreign_key "reviews", "items"
-  add_foreign_key "reviews", "users"
 end
