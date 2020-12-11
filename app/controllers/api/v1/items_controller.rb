@@ -10,6 +10,7 @@ class Api::V1::ItemsController < ApplicationController
 
     def create
         item = Item.new(item_params)
+        # byebug
         if item.save
             render json: ItemSerializer.new(item), status: :accepted
         else
@@ -26,6 +27,6 @@ class Api::V1::ItemsController < ApplicationController
     private
 
     def item_params
-        params.require(:item).permit(:name, :image_url, :price, :description, :category_id)
+        params.require(:item).permit(:name, :image_url, :price, :description, :category_id, :reviews)
     end
 end
