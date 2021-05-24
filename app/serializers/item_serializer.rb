@@ -8,6 +8,3 @@ class ItemSerializer
     end
   end
 end
-
-
-
