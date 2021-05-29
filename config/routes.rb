@@ -8,14 +8,14 @@ Rails.application.routes.draw do
   # source: https://github.com/AyanaZaire/seeda_syllabus_backend/blob/master/project-build-part2-notes.md
   # source: https://www.youtube.com/watch?v=sLrFiwhMPZU&feature=youtu.be 20:50
 
-  namespace :api do 
-    namespace :v1 do 
+  namespace :api do
+    namespace :v1 do
       resources :items, only: [:index, :create, :show]
       resources :categories, only: [:index]
       resources :users, only: [:index, :create]
       resources :reviews, only: [:index, :create]
-      post '/login', to: 'auth#create'
-      get '/profile', to: 'users#profile'
+      post "/login", to: "auth#create"
+      get "/profile", to: "users#profile"
     end
   end
 end

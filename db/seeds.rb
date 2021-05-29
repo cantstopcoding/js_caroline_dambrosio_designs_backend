@@ -15,12 +15,12 @@ Review.destroy_all
 # coco = User.create(first_name: "Coco", last_name: "Chanel", username: "chanel", email: "chanel@chanel.com", password: "pw", image_url: "https://cdn.asiatatler.com/asiatatler/i/th/2020/07/24110448-travel9_cover_1000x1500.jpg")
 # christian = User.create(first_name: "Christian", last_name: "Dior", username: "dior", email: "dior@dior.com", password: "pw", image_url: "https://www.dior.com/couture/var/dior/storage/images/horizon/horizon-import/dior-et-le-chateau-de-la-colle-noire/block-list-christian-dior-et-la-provence-terre-d’inspiration/block-image2/14526753-4-eng-US/image_1440_1200.jpg")
 
-dresses = Category.create(name: 'Dress')
-purses = Category.create(name: 'Purses')
-sandals = Category.create(name: 'Sandals')
+dresses = Category.create(name: "Dress")
+purses = Category.create(name: "Purses")
+sandals = Category.create(name: "Sandals")
 
-outlander_dress  = Item.create(name: "Outlander Costume", image_url: "https://yt3.ggpht.com/a/AATXAJx5mEunDOUJudzpBNqD61pppw8kcQvgmDHMosko=s100-c-k-c0xffffffff-no-rj-mo", price: 500.00, description:"It's awesome!", category_id: dresses.id)
-expensive_purse = Item.create(name: "Expensive Purse", image_url: "https://cdn.shopify.com/s/files/1/0384/0161/products/56265-92_20Chanel_20Vintage_20Classic_20Double_20Flap_20Bag_20Qu_2D_0002_518x518.jpg?v=1591021463", price: 100000.00, description:"It's awesome!", category_id: purses.id)
+outlander_dress = Item.create(name: "Outlander Costume", image_url: "https://yt3.ggpht.com/a/AATXAJx5mEunDOUJudzpBNqD61pppw8kcQvgmDHMosko=s100-c-k-c0xffffffff-no-rj-mo", price: 500.00, description: "It's awesome!", category_id: dresses.id)
+expensive_purse = Item.create(name: "Expensive Purse", image_url: "https://cdn.shopify.com/s/files/1/0384/0161/products/56265-92_20Chanel_20Vintage_20Classic_20Double_20Flap_20Bag_20Qu_2D_0002_518x518.jpg?v=1591021463", price: 100000.00, description: "It's awesome!", category_id: purses.id)
 expensive_sandals = Item.create(name: "Expensive Sandals", image_url: "https://www.mybudapester.com/media/catalog/product/cache/2/image/900x900/9df78eab33525d08d6e5fb8d27136e95/i/m/image_3681_1_5394.jpg", price: 5000000000000.54, description: "It's too much damn money", category_id: sandals.id)
 
 coco_review = Review.create(content: "Nice Dress!", item_id: outlander_dress.id)
