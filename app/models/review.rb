@@ -4,6 +4,8 @@ class Review < ApplicationRecord
 
   # has_many :reviewed_users, through: :reviews, source: :user
 
+  validates :content, presence: true
+
   def created_at
     attributes["created_at"].strftime("%m/%d/%Y")
   end

@@ -13,8 +13,7 @@ class Api::V1::ItemsController < ApplicationController
     if item.save
       render json: ItemSerializer.new(item), status: :accepted #status 202
     else
-      render json: { errors: item.errors.full_messages },
-             status: :unprocessible_entity # status 422
+      render json: item.errors.full_messages, status: :unprocessable_entity # status 422
     end
   end
 
