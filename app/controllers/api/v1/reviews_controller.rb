@@ -1,6 +1,4 @@
 class Api::V1::ReviewsController < ApplicationController
-  skip_before_action :authorized
-
   def index
     reviews = Review.all
     render json: ReviewSerializer.new(reviews)
