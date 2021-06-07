@@ -27,6 +27,15 @@ class Api::V1::ItemsController < ApplicationController
     item.destroy
   end
 
+  def update
+    @item = Item.find_by(id: params[:id])
+    if @item.update(item_params)
+      render json: ItemSerializer.new(@item), status: :accepted
+    else
+      render json: @item.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def item_params
